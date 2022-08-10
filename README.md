@@ -24,4 +24,4 @@
 * react-router-dom
 * Авторизацию, регистрацию и проверка токена с помощью api
 
-[Ссылка на GitHub Pages](https://kavtsure.github.io/mesto-react/)
+[Ссылка на GitHub Pages](https://kavtsure.github.io/react-mesto-auth/)
