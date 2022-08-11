@@ -17,7 +17,7 @@ export const register = ({ email, password }) => {
         body: JSON.stringify({ email, password })
     })
         .then(res => checkResponse(res))
-        .catch((err) => console.log(err));
+        
 };
 
 export const authorize = ({ email, password }) => {

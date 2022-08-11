@@ -22,6 +22,6 @@
 * Create React App
 * Хуки
 * react-router-dom
-* Авторизацию, регистрацию и проверка токена с помощью api
+* Авторизация, регистрация и проверка токена с помощью api
 
 [Ссылка на GitHub Pages](https://kavtsure.github.io/react-mesto-auth/)

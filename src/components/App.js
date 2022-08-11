@@ -30,6 +30,7 @@ function App() {
   const history = useHistory();
   const [emailAuth, setEmailAuth] = useState('');
   const [isInfoTooltip, setIsInfoTooltip] = useState({ isOpen: false, success: false });
+  const isOpen = isEditAvatarPopupOpen || isEditProfilePopupOpen || isAddPlacePopupOpen || selectedCard;
 
   function tokenCheck() {
     const jwt = localStorage.getItem('jwt');
@@ -77,6 +78,20 @@ function App() {
       history.push('/');
     }
   }, [loggedIn, history])
+
+  useEffect(() => {
+    function closeByEscape(evt) {
+      if (evt.key === 'Escape') {
+        closeAllPopups();
+      }
+    }
+    if (isOpen) {
+      document.addEventListener('keydown', closeByEscape);
+      return () => {
+        document.removeEventListener('keydown', closeByEscape);
+      }
+    }
+  }, [isOpen])
 
   const onLogin = ({ email, password }) => {
     setEmailAuth(email);
